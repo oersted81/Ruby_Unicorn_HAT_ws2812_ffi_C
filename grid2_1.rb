@@ -6,7 +6,7 @@ require_relative 'splash_m.rb'
 include Clk_def
 include Splash
 
-#-------------C_FFI---------------------#
+#-------------FFI_C_ini---------------------#
 module UniH_color
   extend FFI::Library
   ffi_lib "./c_lib.so"
@@ -23,7 +23,7 @@ br_pointer.put_array_of_int offset, br_array
 sg_array = Array.new(16,0)
 sg_pointer = FFI::MemoryPointer.new :int, sg_array.length.to_i
 sg_pointer.put_array_of_int offset, sg_array
-#-------------C_FFI---------------------#
+#-------------FFI_C_ini---------------------#
 
 #HAT/time variables
 unicorn =  Array.new(4, Array.new(4,0))
