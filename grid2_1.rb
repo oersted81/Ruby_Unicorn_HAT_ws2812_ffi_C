@@ -16,11 +16,11 @@ module UniH_color
 end
 
 offset = 0
-br_array = [0,0,0,0]
+br_array = Array.new(4,0)
 br_pointer = FFI::MemoryPointer.new :int, br_array.length.to_i
 br_pointer.put_array_of_int offset, br_array
 
-sg_array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+sg_array = Array.new(16,0)
 sg_pointer = FFI::MemoryPointer.new :int, sg_array.length.to_i
 sg_pointer.put_array_of_int offset, sg_array
 #-------------C_FFI---------------------#
